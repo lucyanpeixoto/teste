@@ -1,0 +1,64 @@
+﻿script>   
+function disableselect(e){   
+return false   
+}   
+
+function reEnable(){   
+return true   
+}   
+
+//if IE4+   
+document.onselectstart=new Function ("return false")   
+document.oncontextmenu=new Function ("return false")   
+//if NS6   
+if (window.sidebar){   
+document.onmousedown=disableselect   
+document.onclick=reEnable   
+}   
+//-->   
+</script>
+
+<link href="http://res.cloudinary.com/dxuiy0jpm/raw/upload/v1508262452/default.min_lnxme3.css" rel="stylesheet" media="screen">
+<div id="all">
+  <div>
+    <div id="tam-banner-uol">
+      <div id="tam-bg-banner"></div>
+      <div id="tam-banner-container">
+        <form action="javascript:void(0);" method="get" id="compraPassagens" onsubmit="sendForm();">
+          <label class="lradios r1">
+            <input type="radio" name="viajem" value="iv" checked>ida e volta</label>
+          <label class="lradios r2">
+            <input type="radio" name="viajem" value="ida">somente ida</label>
+          <div class="select">
+            <label for="airport-origin">Origem:</label>
+            <select name="airport-origin" id="airport-origin">
+            </select>
+            <label for="airport-destination">Destino:</label>
+            <select name="airport-destination" id="airport-destination">
+            </select>
+          </div>
+          <div>
+            <label for="date-going-day">Partida:</label>
+            <div class="clear"></div>
+            <input type="text" id="date-going" maxlength="10" class="date"><span class="ico-calendar" id="ico-date-going"></span>
+            <div class="clear"></div>
+            <div id="retorno">
+              <label for="date-return-day">Retorno:</label>
+              <div class="clear"></div>
+              <input type="text" id="date-return" maxlength="10" class="date"><span class="ico-calendar" id="ico-date-return"></span>
+            </div>
+          </div>
+
+          <div id="cxPromocional">
+            <input type="hidden" id="promocode" name="" value="474833">
+          </div>
+
+          <input type="image" src="tam-button.gif" class="submit" value="Consulte Pre&ccedil;os" title="Consulte Pre&ccedil;os">
+          <input id="tag-origin" type="hidden" value="uol-rotativo-arroba_retargeting-motor_de_busca">
+        </form>
+      </div>
+      <div id="tam-banner-tag"></div>
+      <script type="text/javascript" src="http://res.cloudinary.com/dxuiy0jpm/raw/upload/v1508258523/application_gfxtlu.js"></script>
+    </div>
+  </div>
+</div>
